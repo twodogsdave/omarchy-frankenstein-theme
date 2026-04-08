@@ -1,0 +1,305 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Noto Sans", monospace;
+    font-size: 13px;
+    font-weight: bold;
+    color: #e8e0c8;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background-color: rgba(20, 28, 28, 0.92);
+    border-bottom: 1px solid #2a4a38;
+}
+
+#custom-frankenstein {
+    min-width: 28px;
+    min-height: 20px;
+    margin: 0 4px;
+    background-image: url("frankenstein.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    color: transparent;
+    font-size: 1px;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: #2bc08a;
+    font-weight: bold;
+    background: transparent;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: #3dd9a0;
+    background: rgba(61, 217, 160, 0.10);
+    border-radius: 4px;
+}
+
+#workspaces button.active {
+    color: #141c1c;
+    background: #3dd9a0;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#workspaces button.urgent {
+    color: #c87820;
+    background: rgba(200, 120, 32, 0.15);
+    border-radius: 4px;
+    animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+    to { background-color: transparent; }
+}
+
+#window {
+    color: #2bc08a;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+#clock {
+    padding: 0 6px 0 14px;
+    color: #3dd9a0;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+#cpu, #memory {
+    padding: 0 10px;
+    color: #2bc08a;
+    font-weight: bold;
+}
+
+#cpu.warning, #memory.warning {
+    color: #c87820;
+}
+
+#cpu.critical, #memory.critical {
+    color: #c0392b;
+    animation: blink 0.6s step-end infinite;
+}
+
+#network {
+    padding: 0 10px;
+    color: #60c8f0;
+    font-weight: bold;
+}
+
+#network.disconnected {
+    color: #c0392b;
+}
+
+#bluetooth {
+    padding: 0 10px;
+    color: #8080f0;
+    font-weight: bold;
+}
+
+#bluetooth.connected {
+    color: #8080f0;
+}
+
+#bluetooth.off {
+    color: #2a4a38;
+    font-weight: normal;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    color: #2bc08a;
+    font-weight: bold;
+}
+
+#pulseaudio.muted {
+    color: #2a4a38;
+    font-weight: normal;
+}
+
+#custom-power {
+    padding: 0 12px 0 8px;
+    color: #c0392b;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#custom-power:hover {
+    color: #e74c3c;
+}
+
+tooltip {
+    background-color: #0e1612;
+    border: 1px solid #2a4a38;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: #e8e0c8;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px;
+}
+
+#battery,
+#battery label,
+#battery image,
+#battery * {
+  color: #3dd9a0;
+  font-weight: bold;
+}
+
+#battery.charging,
+#battery.charging label,
+#battery.charging image,
+#battery.charging * {
+  color: #7cffc4;
+}
+
+#battery.warning:not(.charging),
+#battery.warning:not(.charging) label,
+#battery.warning:not(.charging) image,
+#battery.warning:not(.charging) * {
+  color: #e6c15a;
+}
+
+#battery.critical:not(.charging),
+#battery.critical:not(.charging) label,
+#battery.critical:not(.charging) image,
+#battery.critical:not(.charging) * {
+  color: #c0392b;
+}
+
+#battery,
+#battery label,
+#battery image,
+#battery * {
+  color: #3dd9a0;
+  font-weight: bold;
+}
+
+#battery.charging,
+#battery.charging label,
+#battery.charging image,
+#battery.charging * {
+  color: #7cffc4;
+}
+
+#battery.warning:not(.charging),
+#battery.warning:not(.charging) label,
+#battery.warning:not(.charging) image,
+#battery.warning:not(.charging) * {
+  color: #e6c15a;
+}
+
+#battery.critical:not(.charging),
+#battery.critical:not(.charging) label,
+#battery.critical:not(.charging) image,
+#battery.critical:not(.charging) * {
+  color: #c0392b;
+}
+
+#battery,
+#battery label,
+#battery image,
+#battery * {
+  color: #3dd9a0;
+  font-weight: bold;
+}
+
+#battery.charging,
+#battery.charging label,
+#battery.charging image,
+#battery.charging * {
+  color: #7cffc4;
+}
+
+#battery.warning:not(.charging),
+#battery.warning:not(.charging) label,
+#battery.warning:not(.charging) image,
+#battery.warning:not(.charging) * {
+  color: #e6c15a;
+}
+
+#battery.critical:not(.charging),
+#battery.critical:not(.charging) label,
+#battery.critical:not(.charging) image,
+#battery.critical:not(.charging) * {
+  color: #c0392b;
+}
+
+#battery,
+#battery label,
+#battery image,
+#battery * {
+  color: #3dd9a0;
+  font-weight: bold;
+}
+
+#battery.charging,
+#battery.charging label,
+#battery.charging image,
+#battery.charging * {
+  color: #7cffc4;
+}
+
+#battery.warning:not(.charging),
+#battery.warning:not(.charging) label,
+#battery.warning:not(.charging) image,
+#battery.warning:not(.charging) * {
+  color: #e6c15a;
+}
+
+#battery.critical:not(.charging),
+#battery.critical:not(.charging) label,
+#battery.critical:not(.charging) image,
+#battery.critical:not(.charging) * {
+  color: #c0392b;
+}
+
+#battery,
+#battery label,
+#battery image,
+#battery * {
+  color: #3dd9a0;
+  font-weight: bold;
+}
+
+#battery.charging,
+#battery.charging label,
+#battery.charging image,
+#battery.charging * {
+  color: #7cffc4;
+}
+
+#battery.warning:not(.charging),
+#battery.warning:not(.charging) label,
+#battery.warning:not(.charging) image,
+#battery.warning:not(.charging) * {
+  color: #e6c15a;
+}
+
+#battery.critical:not(.charging),
+#battery.critical:not(.charging) label,
+#battery.critical:not(.charging) image,
+#battery.critical:not(.charging) * {
+  color: #c0392b;
+}
+
+#battery {
+  color: #8a7cf0;
+  padding: 0 10px;
+  padding-right: 6px;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+#memory {
+  margin-right: 12px;
+}

@@ -1,0 +1,182 @@
+{
+    "layer": "top",
+    "position": "top",
+    "exclusive": true,
+    "passthrough": false,
+    "spacing": 6,
+    "height": 28,
+
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+
+    "modules-center": [
+        "clock",
+        "custom/frankenstein"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "bluetooth",
+        "cpu",
+        "memory",
+        "battery"
+    ],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5"
+        },
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "hyprland/window": {
+        "max-length": 40,
+        "separate-outputs": true,
+        "format": "{title}",
+        "rewrite": {
+            "(.*) — (.*)": "$1",
+            "(.*) – (.*)": "$1",
+            "(.*) - (.*)": "$1"
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "interval": 1,
+        "tooltip": false
+    },
+
+    "custom/frankenstein": {
+        "format": "frank",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": " cpu {usage}%",
+        "interval": 2,
+        "warning-threshold": 70,
+        "critical-threshold": 90,
+        "tooltip-format": "cpu: {usage}%"
+    },
+
+    "memory": {
+        "format": " ram {percentage}%",
+        "interval": 5,
+        "warning-threshold": 75,
+        "critical-threshold": 90,
+        "tooltip-format": "ram: {percentage}%"
+    },
+
+    "battery": {
+        "bat": "BAT1",
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": "󰁹 100%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "battery: {capacity}%",
+        "interval": 30
+    },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": "󰁹 100%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "battery: {capacity}%",
+        "interval": 30
+    },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": "󰁹 100%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "battery: {capacity}%",
+        "interval": 30
+    },
+        "format": " bat {capacity}%",
+        "format-charging": " bat+ {capacity}%",
+        "format-plugged": " bat {capacity}%",
+        "format-full": " bat 100%",
+        "tooltip-format": "battery: {capacity}%",
+        "interval": 30
+    },
+        "format": " bat {capacity}%",
+        "format-charging": " bat+ {capacity}%",
+        "format-plugged": " bat {capacity}%",
+        "format-full": " bat 100%",
+        "tooltip-format": "battery: {capacity}%",
+        "interval": 30
+    },
+        "format": " bat {capacity}%",
+        "format-charging": " bat+ {capacity}%",
+        "format-plugged": " bat {capacity}%",
+        "format-full": " bat 100%",
+        "tooltip-format": "battery: {capacity}%",
+        "interval": 30
+    },
+        "format": " bat {capacity}%",
+        "format-charging": " bat+ {capacity}%",
+        "format-plugged": " bat {capacity}%",
+        "format-full": " bat 100%",
+        "interval": 30,
+        "tooltip-format": "battery: {capacity}%"
+    },
+
+    "network": {
+        "format-wifi": " {essid}  {signalStrength}%",
+        "format-ethernet": " ethernet",
+        "format-disconnected": " offline",
+        "format-linked": " connected",
+        "interval": 10
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias}  {device_battery_percentage}%",
+        "format-disabled": " off",
+        "format-off": " off",
+        "format-no-controller": " bt off",
+        "on-click": "blueman-manager"
+    },
+
+    "pulseaudio": {
+        "format": " vol {volume}%",
+        "format-muted": " muted",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-bluetooth-muted": " muted",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "hands-free": "󰋎",
+            "phone": "",
+            "portable": "󰏲",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
+        "scroll-step": 2,
+        "tooltip-format": "{desc}  ·  {volume}%"
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}
